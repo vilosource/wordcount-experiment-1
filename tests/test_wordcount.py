@@ -12,3 +12,23 @@ def test_count_words_empty():
 
 def test_count_words_whitespace_collapse():
     assert wordcount.count_words("  a  b  ") == 2
+
+
+def test_count_lines_empty():
+    assert wordcount.count_lines("") == 0
+
+
+def test_count_lines_basic():
+    assert wordcount.count_lines("hello") == 1
+
+
+def test_count_lines_multiple():
+    assert wordcount.count_lines("a\nb\nc") == 3
+
+
+def test_count_lines_trailing_newline():
+    assert wordcount.count_lines("a\nb\nc\n") == 3
+
+
+def test_count_lines_single_newline():
+    assert wordcount.count_lines("\n") == 1

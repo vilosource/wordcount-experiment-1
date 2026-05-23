@@ -4,3 +4,11 @@
 def count_words(text: str) -> int:
     """Return the number of whitespace-separated words in `text`."""
     return len(text.split())
+
+
+def count_lines(text: str) -> int:
+    """Return the number of lines in `text`."""
+    stripped = text.rstrip('\n')
+    if not stripped:
+        return 0 if '\n' not in text else 1
+    return len(stripped.split('\n'))
