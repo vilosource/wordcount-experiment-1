@@ -34,3 +34,7 @@ def test_count_lines_trailing_newline():
 
 def test_count_lines_single_newline():
     assert wordcount.count_lines("\n") == 1
+
+
+def test_count_lines_multiple_empty_lines():
+    assert wordcount.count_lines("\n\n\n") == 3
