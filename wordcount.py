@@ -7,7 +7,10 @@ def count_words(text: str) -> int:
 
 
 def count_lines(text: str) -> int:
-    """Return the number of lines in `text`."""
+    """Return the number of lines in `text`.
+
+    Trailing newline does not add a phantom line.
+    """
     if not text:
         return 0
     newline_count = text.count("\n")
